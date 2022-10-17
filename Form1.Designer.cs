@@ -30,10 +30,10 @@
         {
             this.checkBoxAssets = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBoxZBrush = new System.Windows.Forms.CheckBox();
+            this.checkBoxUnreal = new System.Windows.Forms.CheckBox();
             this.checkBoxTerragen = new System.Windows.Forms.CheckBox();
-            this.Substance = new System.Windows.Forms.CheckBox();
+            this.checkBoxSubstance = new System.Windows.Forms.CheckBox();
             this.checkBoxSpeedTree = new System.Windows.Forms.CheckBox();
             this.checkBoxPremiere = new System.Windows.Forms.CheckBox();
             this.checkBoxPhotoshop = new System.Windows.Forms.CheckBox();
@@ -51,11 +51,12 @@
             this.checkBoxBlender = new System.Windows.Forms.CheckBox();
             this.checkBoxAfterEffects = new System.Windows.Forms.CheckBox();
             this.checkBox3DsMax = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxAdd = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.textBoxProjectName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,14 +72,15 @@
             this.checkBoxAssets.TabIndex = 3;
             this.checkBoxAssets.Text = "__Assets";
             this.checkBoxAssets.UseVisualStyleBackColor = true;
+            this.checkBoxAssets.CheckedChanged += new System.EventHandler(this.checkBoxAssets_CheckedChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(99)))), ((int)(((byte)(101)))));
-            this.panel1.Controls.Add(this.checkBox7);
-            this.panel1.Controls.Add(this.checkBox6);
+            this.panel1.Controls.Add(this.checkBoxZBrush);
+            this.panel1.Controls.Add(this.checkBoxUnreal);
             this.panel1.Controls.Add(this.checkBoxTerragen);
-            this.panel1.Controls.Add(this.Substance);
+            this.panel1.Controls.Add(this.checkBoxSubstance);
             this.panel1.Controls.Add(this.checkBoxSpeedTree);
             this.panel1.Controls.Add(this.checkBoxPremiere);
             this.panel1.Controls.Add(this.checkBoxPhotoshop);
@@ -102,33 +104,35 @@
             this.panel1.Size = new System.Drawing.Size(306, 1058);
             this.panel1.TabIndex = 4;
             // 
-            // checkBox7
+            // checkBoxZBrush
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox7.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBox7.Location = new System.Drawing.Point(30, 985);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(107, 32);
-            this.checkBox7.TabIndex = 24;
-            this.checkBox7.Text = "Zbrush";
-            this.checkBox7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBoxZBrush.AutoSize = true;
+            this.checkBoxZBrush.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxZBrush.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxZBrush.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
+            this.checkBoxZBrush.Location = new System.Drawing.Point(30, 985);
+            this.checkBoxZBrush.Name = "checkBoxZBrush";
+            this.checkBoxZBrush.Size = new System.Drawing.Size(107, 32);
+            this.checkBoxZBrush.TabIndex = 24;
+            this.checkBoxZBrush.Text = "Zbrush";
+            this.checkBoxZBrush.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxZBrush.UseVisualStyleBackColor = true;
+            this.checkBoxZBrush.CheckedChanged += new System.EventHandler(this.checkBoxZBrush_CheckedChanged);
             // 
-            // checkBox6
+            // checkBoxUnreal
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox6.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBox6.Location = new System.Drawing.Point(30, 935);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(102, 32);
-            this.checkBox6.TabIndex = 23;
-            this.checkBox6.Text = "Unreal";
-            this.checkBox6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBoxUnreal.AutoSize = true;
+            this.checkBoxUnreal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxUnreal.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxUnreal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
+            this.checkBoxUnreal.Location = new System.Drawing.Point(30, 935);
+            this.checkBoxUnreal.Name = "checkBoxUnreal";
+            this.checkBoxUnreal.Size = new System.Drawing.Size(102, 32);
+            this.checkBoxUnreal.TabIndex = 23;
+            this.checkBoxUnreal.Text = "Unreal";
+            this.checkBoxUnreal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxUnreal.UseVisualStyleBackColor = true;
+            this.checkBoxUnreal.CheckedChanged += new System.EventHandler(this.checkBoxUnreal_CheckedChanged);
             // 
             // checkBoxTerragen
             // 
@@ -143,20 +147,22 @@
             this.checkBoxTerragen.Text = "Terragen";
             this.checkBoxTerragen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxTerragen.UseVisualStyleBackColor = true;
+            this.checkBoxTerragen.CheckedChanged += new System.EventHandler(this.checkBoxTerragen_CheckedChanged);
             // 
-            // Substance
+            // checkBoxSubstance
             // 
-            this.Substance.AutoSize = true;
-            this.Substance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Substance.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Substance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.Substance.Location = new System.Drawing.Point(30, 835);
-            this.Substance.Name = "Substance";
-            this.Substance.Size = new System.Drawing.Size(145, 32);
-            this.Substance.TabIndex = 21;
-            this.Substance.Text = "Substance";
-            this.Substance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Substance.UseVisualStyleBackColor = true;
+            this.checkBoxSubstance.AutoSize = true;
+            this.checkBoxSubstance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxSubstance.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxSubstance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
+            this.checkBoxSubstance.Location = new System.Drawing.Point(30, 835);
+            this.checkBoxSubstance.Name = "checkBoxSubstance";
+            this.checkBoxSubstance.Size = new System.Drawing.Size(145, 32);
+            this.checkBoxSubstance.TabIndex = 21;
+            this.checkBoxSubstance.Text = "Substance";
+            this.checkBoxSubstance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxSubstance.UseVisualStyleBackColor = true;
+            this.checkBoxSubstance.CheckedChanged += new System.EventHandler(this.checkBoxSubstance_CheckedChanged);
             // 
             // checkBoxSpeedTree
             // 
@@ -171,6 +177,7 @@
             this.checkBoxSpeedTree.Text = "SpeedTree";
             this.checkBoxSpeedTree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxSpeedTree.UseVisualStyleBackColor = true;
+            this.checkBoxSpeedTree.CheckedChanged += new System.EventHandler(this.checkBoxSpeedTree_CheckedChanged);
             // 
             // checkBoxPremiere
             // 
@@ -185,6 +192,7 @@
             this.checkBoxPremiere.Text = "Premiere";
             this.checkBoxPremiere.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxPremiere.UseVisualStyleBackColor = true;
+            this.checkBoxPremiere.CheckedChanged += new System.EventHandler(this.checkBoxPremiere_CheckedChanged);
             // 
             // checkBoxPhotoshop
             // 
@@ -199,6 +207,7 @@
             this.checkBoxPhotoshop.Text = "Photoshop";
             this.checkBoxPhotoshop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxPhotoshop.UseVisualStyleBackColor = true;
+            this.checkBoxPhotoshop.CheckedChanged += new System.EventHandler(this.checkBoxPhotoshop_CheckedChanged);
             // 
             // checkBoxNuke
             // 
@@ -213,6 +222,7 @@
             this.checkBoxNuke.Text = "Nuke";
             this.checkBoxNuke.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxNuke.UseVisualStyleBackColor = true;
+            this.checkBoxNuke.CheckedChanged += new System.EventHandler(this.checkBoxNuke_CheckedChanged);
             // 
             // checkBoxMaya
             // 
@@ -227,6 +237,7 @@
             this.checkBoxMaya.Text = "Maya";
             this.checkBoxMaya.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxMaya.UseVisualStyleBackColor = true;
+            this.checkBoxMaya.CheckedChanged += new System.EventHandler(this.checkBoxMaya_CheckedChanged);
             // 
             // checkBoxMarvelous
             // 
@@ -241,6 +252,7 @@
             this.checkBoxMarvelous.Text = "Marvelous";
             this.checkBoxMarvelous.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxMarvelous.UseVisualStyleBackColor = true;
+            this.checkBoxMarvelous.CheckedChanged += new System.EventHandler(this.checkBoxMarvelous_CheckedChanged);
             // 
             // checkBoxKrita
             // 
@@ -255,6 +267,7 @@
             this.checkBoxKrita.Text = "Krita";
             this.checkBoxKrita.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxKrita.UseVisualStyleBackColor = true;
+            this.checkBoxKrita.CheckedChanged += new System.EventHandler(this.checkBoxKrita_CheckedChanged);
             // 
             // checkBoxIlustrator
             // 
@@ -269,6 +282,7 @@
             this.checkBoxIlustrator.Text = "Ilustrator";
             this.checkBoxIlustrator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxIlustrator.UseVisualStyleBackColor = true;
+            this.checkBoxIlustrator.CheckedChanged += new System.EventHandler(this.checkBoxIlustrator_CheckedChanged);
             // 
             // checkBoxHoudini
             // 
@@ -283,6 +297,7 @@
             this.checkBoxHoudini.Text = "Houdini";
             this.checkBoxHoudini.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxHoudini.UseVisualStyleBackColor = true;
+            this.checkBoxHoudini.CheckedChanged += new System.EventHandler(this.checkBoxHoudini_CheckedChanged);
             // 
             // checkBox9
             // 
@@ -325,6 +340,7 @@
             this.checkBoxDaVinci.Text = "DaVinci";
             this.checkBoxDaVinci.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxDaVinci.UseVisualStyleBackColor = true;
+            this.checkBoxDaVinci.CheckedChanged += new System.EventHandler(this.checkBoxDaVinci_CheckedChanged);
             // 
             // checkBoxClarisse
             // 
@@ -339,6 +355,7 @@
             this.checkBoxClarisse.Text = "Clarisse";
             this.checkBoxClarisse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxClarisse.UseVisualStyleBackColor = true;
+            this.checkBoxClarisse.CheckedChanged += new System.EventHandler(this.checkBoxClarisse_CheckedChanged);
             // 
             // checkBoxCinema4D
             // 
@@ -353,6 +370,7 @@
             this.checkBoxCinema4D.Text = "Cinema4D";
             this.checkBoxCinema4D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxCinema4D.UseVisualStyleBackColor = true;
+            this.checkBoxCinema4D.CheckedChanged += new System.EventHandler(this.checkBoxCinema4D_CheckedChanged);
             // 
             // checkBoxBlender
             // 
@@ -367,6 +385,7 @@
             this.checkBoxBlender.Text = "Blender";
             this.checkBoxBlender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxBlender.UseVisualStyleBackColor = true;
+            this.checkBoxBlender.CheckedChanged += new System.EventHandler(this.checkBoxBlender_CheckedChanged);
             // 
             // checkBoxAfterEffects
             // 
@@ -381,6 +400,7 @@
             this.checkBoxAfterEffects.Text = "AfterEffects";
             this.checkBoxAfterEffects.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxAfterEffects.UseVisualStyleBackColor = true;
+            this.checkBoxAfterEffects.CheckedChanged += new System.EventHandler(this.checkBoxAfterEffects_CheckedChanged);
             // 
             // checkBox3DsMax
             // 
@@ -394,16 +414,17 @@
             this.checkBox3DsMax.TabIndex = 4;
             this.checkBox3DsMax.Text = "3DsMax";
             this.checkBox3DsMax.UseVisualStyleBackColor = true;
+            this.checkBox3DsMax.CheckedChanged += new System.EventHandler(this.checkBox3DsMax_CheckedChanged);
             // 
-            // textBox1
+            // textBoxAdd
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(367, 399);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 31);
-            this.textBox1.TabIndex = 6;
+            this.textBoxAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
+            this.textBoxAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxAdd.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxAdd.Location = new System.Drawing.Point(367, 399);
+            this.textBoxAdd.Name = "textBoxAdd";
+            this.textBoxAdd.Size = new System.Drawing.Size(288, 31);
+            this.textBoxAdd.TabIndex = 6;
             // 
             // richTextBox1
             // 
@@ -453,7 +474,7 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.btnCreate.Location = new System.Drawing.Point(379, 174);
+            this.btnCreate.Location = new System.Drawing.Point(367, 188);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(160, 61);
             this.btnCreate.TabIndex = 0;
@@ -461,15 +482,26 @@
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
+            // textBoxProjectName
+            // 
+            this.textBoxProjectName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
+            this.textBoxProjectName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxProjectName.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxProjectName.Location = new System.Drawing.Point(367, 115);
+            this.textBoxProjectName.Name = "textBoxProjectName";
+            this.textBoxProjectName.Size = new System.Drawing.Size(288, 31);
+            this.textBoxProjectName.TabIndex = 9;
+            // 
             // FormMainInstaFolder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(215)))), ((int)(((byte)(214)))));
             this.ClientSize = new System.Drawing.Size(862, 1064);
+            this.Controls.Add(this.textBoxProjectName);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxAdd);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.panel1);
@@ -504,17 +536,18 @@
         private CheckBox checkBoxNuke;
         private CheckBox checkBoxMaya;
         private CheckBox checkBoxMarvelous;
-        private CheckBox checkBox7;
-        private CheckBox checkBox6;
+        private CheckBox checkBoxZBrush;
+        private CheckBox checkBoxUnreal;
         private CheckBox checkBoxTerragen;
-        private CheckBox Substance;
+        private CheckBox checkBoxSubstance;
         private CheckBox checkBoxSpeedTree;
         private CheckBox checkBoxPremiere;
         private CheckBox checkBoxPhotoshop;
-        private TextBox textBox1;
+        private TextBox textBoxAdd;
         private RichTextBox richTextBox1;
         private Button buttonExit;
         private Button buttonAdd;
         private Button btnCreate;
+        private TextBox textBoxProjectName;
     }
 }
