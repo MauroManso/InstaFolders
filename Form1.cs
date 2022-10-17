@@ -1,10 +1,25 @@
 namespace InstaFolders
 {
-    public partial class Form1 : Form
+    public partial class FormMainInstaFolder : Form
     {
-        public Form1()
+        public FormMainInstaFolder()
         {
             InitializeComponent();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
