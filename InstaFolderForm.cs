@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Xml.Linq;
 using System.IO;
+using System.Reflection;
 
 namespace InstaFolders
 {
@@ -226,10 +227,11 @@ namespace InstaFolders
 
             string projectName = textBoxProjectName.Text;
 
+            string rootDirofff = @"D:\Projects\";
+            string rootDir = AppDomain.CurrentDomain.BaseDirectory;
+
             if (projectName.Length > 1)
             {
-                string rootDir = @"D:\Projects\";
-
                 string dir = rootDir + projectName;
                 // If directory does not exist, create it
                 if (!Directory.Exists(dir))

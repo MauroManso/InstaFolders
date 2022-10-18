@@ -1,0 +1,17 @@
+D:\Projects\InstaFolders\bin\Release\net6.0-windows\InstaFolders.exe
+D:\Projects\InstaFolders\bin\Release\net6.0-windows\InstaFolders.deps.json
+D:\Projects\InstaFolders\bin\Release\net6.0-windows\InstaFolders.runtimeconfig.json
+D:\Projects\InstaFolders\bin\Release\net6.0-windows\InstaFolders.dll
+D:\Projects\InstaFolders\bin\Release\net6.0-windows\InstaFolders.pdb
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.csproj.AssemblyReference.cache
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.FormMainInstaFolder.resources
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.csproj.GenerateResource.cache
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.AssemblyInfoInputs.cache
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.AssemblyInfo.cs
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.csproj.CoreCompileInputs.cache
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.dll
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\refint\InstaFolders.dll
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.pdb
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.genruntimeconfig.cache
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\ref\InstaFolders.dll
