@@ -223,25 +223,30 @@ namespace InstaFolders
         private void btnCreate_Click(object sender, EventArgs e)
         {
             RefreshChecklist("");
+
             string projectName = textBoxProjectName.Text;
 
-            string dir = @"D:\Projects\" + projectName;
-            // If directory does not exist, create it
-            if (!Directory.Exists(dir))
+            if (projectName.Length > 1)
             {
-                Directory.CreateDirectory(dir);
-            }
+                string rootDir = @"D:\Projects\";
 
-            foreach (string folderName in folderList)
-            {
-                string subdir = @"D:\Projects\" + projectName + @"\" + folderName;
+                string dir = rootDir + projectName;
                 // If directory does not exist, create it
-                if (!Directory.Exists(subdir))
+                if (!Directory.Exists(dir))
                 {
-                    Directory.CreateDirectory(subdir);
+                    Directory.CreateDirectory(dir);
+                }
+
+                foreach (string folderName in folderList)
+                {
+                    string subdir = rootDir + projectName + @"\" + folderName;
+                    // If directory does not exist, create it
+                    if (!Directory.Exists(subdir))
+                    {
+                        Directory.CreateDirectory(subdir);
+                    }
                 }
             }
-
             ResetDesign();
         }
 
