@@ -1,13 +1,14 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Xml.Linq;
+using System.IO;
 
 namespace InstaFolders
 {
     public partial class FormMainInstaFolder : Form
     {
-        
-        String folderList= "";
+
+        List<string> folderList = new List<string>();
 
         public FormMainInstaFolder()
         {
@@ -17,192 +18,182 @@ namespace InstaFolders
 
         public void RefreshChecklist(string add)
         {
-            if (checkBoxAssets.Checked == true) {
-                if (folderList.Contains("mkdir __Assets\n") == false) folderList += "mkdir __Assets\n";
-            }
-            else folderList.Replace("mkdir __Assets\n", "");
-
-
-            if (checkBox3DsMax.Checked == true)
+            if (checkBoxAssets.Checked)
             {
-                if (folderList.Contains("mkdir 3DsMax\n") == false) folderList += "mkdir 3DsMax\n";
+                if (folderList.Contains("__Assets") == false) folderList.Add("__Assets");
             }
-            else folderList.Replace("mkdir 3DsMax\n", "");
+            else if (folderList.Contains("__Assets")) folderList.Remove("__Assets");
 
 
-            if (checkBoxAfterEffects.Checked == true)
+
+            if (checkBox3DsMax.Checked)
             {
-                if (folderList.Contains("mkdir AfterEffects\n") == false) folderList += "mkdir AfterEffects\n";
+                if (folderList.Contains("3DsMax") == false) folderList.Add("3DsMax");
             }
-            else folderList.Replace("mkdir AfterEffects\n", "");
+            else if (folderList.Contains("3DsMax")) folderList.Remove("3DsMax");
 
 
-            if (checkBoxBlender.Checked == true)
+            if (checkBoxAfterEffects.Checked)
             {
-                if (folderList.Contains("mkdir Blender\n") == false) folderList += "mkdir Blender\n";
+                if (folderList.Contains("AfterEffects") == false) folderList.Add("AfterEffects");
             }
-            else folderList.Replace("mkdir Blender\n", "");
+            else if (folderList.Contains("AfterEffects")) folderList.Remove("AfterEffects");
 
 
-            if (checkBoxCinema4D.Checked == true)
+            if (checkBoxBlender.Checked)
             {
-                if (folderList.Contains("mkdir Cinema4D\n") == false) folderList += "mkdir Cinema4D\n";
+                if (folderList.Contains("Blender") == false) folderList.Add("Blender");
             }
-            else folderList.Replace("mkdir Cinema4D\n", "");
+            else if (folderList.Contains("Blender")) folderList.Remove("Blender");
 
 
-            if (checkBoxClarisse.Checked == true)
+            if (checkBoxCinema4D.Checked)
             {
-                if (folderList.Contains("mkdir Clarisse\n") == false) folderList += "mkdir Clarisse\n";
+                if (folderList.Contains("Cinema4D") == false) folderList.Add("Cinema4D");
             }
-            else folderList.Replace("mkdir Clarisse\n", "");
+            else if (folderList.Contains("Cinema4D")) folderList.Remove("Cinema4D");
 
 
-            if (checkBoxDaVinci.Checked == true)
+            if (checkBoxClarisse.Checked)
             {
-                if (folderList.Contains("mkdir DaVinci\n") == false) folderList += "mkdir DaVinci\n";
+                if (folderList.Contains("Clarisse") == false) folderList.Add("Clarisse");
             }
-            else folderList.Replace("mkdir DaVinci\n", "");
+            else if (folderList.Contains("Clarisse")) folderList.Remove("Clarisse");
 
 
-            if (checkBoxHoudini.Checked == true)
+            if (checkBoxDaVinci.Checked)
             {
-                if (folderList.Contains("mkdir Houdini\n") == false) folderList += "mkdir Houdini\n";
+                if (folderList.Contains("DaVinci") == false) folderList.Add("DaVinci");
             }
-            else folderList.Replace("mkdir Houdini\n", "");
+            else if (folderList.Contains("DaVinci")) folderList.Remove("DaVinci");
 
 
-            if (checkBoxIlustrator.Checked == true)
+            if (checkBoxHoudini.Checked)
             {
-                if (folderList.Contains("mkdir Ilustrator\n") == false) folderList += "mkdir Ilustrator\n";
+                if (folderList.Contains("Houdini") == false) folderList.Add("Houdini");
             }
-            else folderList.Replace("mkdir Ilustrator\n", "");
+            else if (folderList.Contains("Houdini")) folderList.Remove("Houdini");
 
 
-            if (checkBoxKrita.Checked == true)
+            if (checkBoxIlustrator.Checked)
             {
-                if (folderList.Contains("mkdir Krita\n") == false) folderList += "mkdir Krita\n";
+                if (folderList.Contains("Ilustrator") == false) folderList.Add("Ilustrator");
             }
-            else folderList.Replace("mkdir Krita\n", "");
+            else if (folderList.Contains("Ilustrator")) folderList.Remove("Ilustrator");
 
 
-            if (checkBoxMarvelous.Checked == true)
+            if (checkBoxKrita.Checked)
             {
-                if (folderList.Contains("mkdir Marvelous\n") == false) folderList += "mkdir Marvelous\n";
+                if (folderList.Contains("Krita") == false) folderList.Add("Krita");
             }
-            else folderList.Replace("mkdir Marvelous\n", "");
+            else if (folderList.Contains("Krita")) folderList.Remove("Krita");
 
 
-            if (checkBoxMaya.Checked == true)
+            if (checkBoxMarvelous.Checked)
             {
-                if (folderList.Contains("mkdir Maya\n") == false) folderList += "mkdir Maya\n";
+                if (folderList.Contains("Marvelous") == false) folderList.Add("Marvelous");
             }
-            else folderList.Replace("mkdir Maya\n", "");
+            else if (folderList.Contains("Marvelous")) folderList.Remove("Marvelous");
 
 
-            if (checkBoxNuke.Checked == true)
+            if (checkBoxMaya.Checked)
             {
-                if (folderList.Contains("mkdir Nuke\n") == false) folderList += "mkdir Nuke\n";
+                if (folderList.Contains("Maya") == false) folderList.Add("Maya");
             }
-            else folderList.Replace("mkdir Nuke\n", "");
+            else if (folderList.Contains("Maya")) folderList.Remove("Maya");
 
 
-            if (checkBoxPhotoshop.Checked == true)
+            if (checkBoxNuke.Checked)
             {
-                if (folderList.Contains("mkdir Photoshop\n") == false) folderList += "mkdir Photoshop\n";
+                if (folderList.Contains("Nuke") == false) folderList.Add("Nuke");
             }
-            else folderList.Replace("mkdir Photoshop\n", "");
+            else if (folderList.Contains("Nuke")) folderList.Remove("Nuke");
 
 
-            if (checkBoxPremiere.Checked == true)
+            if (checkBoxPhotoshop.Checked)
             {
-                if (folderList.Contains("mkdir Premiere\n") == false) folderList += "mkdir Premiere\n";
+                if (folderList.Contains("Photoshop") == false) folderList.Add("Photoshop");
             }
-            else folderList.Replace("mkdir Premiere\n", "");
+            else if (folderList.Contains("Photoshop")) folderList.Remove("Photoshop");
 
 
-            if (checkBoxSpeedTree.Checked == true)
+            if (checkBoxPremiere.Checked)
             {
-                if (folderList.Contains("mkdir SpeedTree\n") == false) folderList += "mkdir SpeedTree\n";
+                if (folderList.Contains("Premiere") == false) folderList.Add("Premiere");
             }
-            else folderList.Replace("mkdir SpeedTree\n", "");
+            else if (folderList.Contains("Premiere")) folderList.Remove("Premiere");
 
 
-            if (checkBoxSubstance.Checked == true)
+            if (checkBoxSpeedTree.Checked)
             {
-                if (folderList.Contains("mkdir Substance\n") == false) folderList += "mkdir Substance\n";
+                if (folderList.Contains("SpeedTree") == false) folderList.Add("SpeedTree");
             }
-            else folderList.Replace("mkdir Substance\n", "");
+            else if (folderList.Contains("SpeedTree")) folderList.Remove("SpeedTree");
 
 
-            if (checkBoxTerragen.Checked == true)
+            if (checkBoxSubstance.Checked)
             {
-                if (folderList.Contains("mkdir Terragen\n") == false) folderList += "mkdir Terragen\n";
+                if (folderList.Contains("Substance") == false) folderList.Add("Substance");
             }
-            else folderList.Replace("mkdir Terragen\n", "");
+            else if (folderList.Contains("Substance")) folderList.Remove("Substance");
 
 
-            if (checkBoxUnreal.Checked == true)
+            if (checkBoxTerragen.Checked)
             {
-                if (folderList.Contains("mkdir Unreal\n") == false) folderList += "mkdir Unreal\n";
+                if (folderList.Contains("Terragen") == false) folderList.Add("Terragen");
             }
-            else folderList.Replace("mkdir Unreal\n", "");
+            else if (folderList.Contains("Terragen")) folderList.Remove("Terragen");
 
 
-            if (checkBoxZBrush.Checked == true)
+            if (checkBoxUnreal.Checked)
             {
-                if (folderList.Contains("mkdir ZBrush\n") == false) folderList += "mkdir ZBrush\n";
+                if (folderList.Contains("Unreal") == false) folderList.Add("Unreal");
             }
-            else folderList.Replace("mkdir ZBrush\n", "");
+            else if (folderList.Contains("Unreal")) folderList.Remove("Unreal");
 
 
-            if (add.Length > 1)
+            if (checkBoxZBrush.Checked)
             {
-                folderList += add;
+                if (folderList.Contains("ZBrush") == false) folderList.Add("ZBrush");
+            }
+            else if (folderList.Contains("ZBrush")) folderList.Remove("ZBrush");
+
+
+            if(add.Length > 1)
+            {
+                folderList.Add(add);
+
             }
 
-
-            richTextBox1.Text = folderList;
-        }
-
-        static void ExecuteCommand(string command)
-        {
-            int exitCode;
-            ProcessStartInfo processInfo;
-            Process process;
-
-            processInfo = new ProcessStartInfo("cmd.exe", "/c " + command);
-            processInfo.CreateNoWindow = true;
-            processInfo.UseShellExecute = false;
-            // *** Redirect the output ***
-            processInfo.RedirectStandardError = true;
-            processInfo.RedirectStandardOutput = true;
-
-            process = Process.Start(processInfo);
-            process.WaitForExit();
-
-            // *** Read the streams ***
-            // Warning: This approach can lead to deadlocks, see Edit #2
-            string output = process.StandardOutput.ReadToEnd();
-            string error = process.StandardError.ReadToEnd();
-
-            exitCode = process.ExitCode;
-
-            Console.WriteLine("output>>" + (String.IsNullOrEmpty(output) ? "(none)" : output));
-            Console.WriteLine("error>>" + (String.IsNullOrEmpty(error) ? "(none)" : error));
-            Console.WriteLine("ExitCode: " + exitCode.ToString(), "ExecuteCommand");
-            process.Close();
+            richTextBox1.Clear();
+            foreach (string folderName in folderList)
+            {
+                richTextBox1.Text += folderName + "\n";
+            }
+                
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             RefreshChecklist("");
             string projectName = textBoxProjectName.Text;
-            string command = "@echo off\r\ncls \r\n\r\nset projectName= \"" + projectName + " \"\r\ncd D:\\\\Projects \r\n\r\nmkdir %projectName%\r\ncd %projectName%\n" + richTextBox1.Text;
-            
-            richTextBox1.Text = command;
 
-            ExecuteCommand(command);
+            string dir = @"D:\Projects\" + projectName;
+            // If directory does not exist, create it
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+
+            foreach (string folderName in folderList)
+            {
+                string subdir = @"D:\Projects\" + projectName + @"\" + folderName;
+                // If directory does not exist, create it
+                if (!Directory.Exists(subdir))
+                {
+                    Directory.CreateDirectory(subdir);
+                }
+            }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -210,7 +201,7 @@ namespace InstaFolders
             string folderAdd = "";
             if (textBoxAdd.Text.Length > 1)
             {
-                folderAdd = "mkdir " + textBoxAdd.Text + "\n";
+                folderAdd = textBoxAdd.Text;
                 RefreshChecklist(folderAdd);
             }
             textBoxAdd.Clear();

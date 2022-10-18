@@ -57,6 +57,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.textBoxProjectName = new System.Windows.Forms.TextBox();
+            this.labelProjectName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -433,7 +434,7 @@
             this.richTextBox1.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox1.Location = new System.Drawing.Point(367, 476);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(288, 521);
+            this.richTextBox1.Size = new System.Drawing.Size(419, 521);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
@@ -492,12 +493,24 @@
             this.textBoxProjectName.Size = new System.Drawing.Size(288, 31);
             this.textBoxProjectName.TabIndex = 9;
             // 
+            // labelProjectName
+            // 
+            this.labelProjectName.AutoSize = true;
+            this.labelProjectName.Font = new System.Drawing.Font("SansSerif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelProjectName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
+            this.labelProjectName.Location = new System.Drawing.Point(367, 69);
+            this.labelProjectName.Name = "labelProjectName";
+            this.labelProjectName.Size = new System.Drawing.Size(201, 32);
+            this.labelProjectName.TabIndex = 10;
+            this.labelProjectName.Text = "Project name:";
+            // 
             // FormMainInstaFolder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(215)))), ((int)(((byte)(214)))));
             this.ClientSize = new System.Drawing.Size(862, 1064);
+            this.Controls.Add(this.labelProjectName);
             this.Controls.Add(this.textBoxProjectName);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.buttonExit);
@@ -549,5 +562,6 @@
         private Button buttonAdd;
         private Button btnCreate;
         private TextBox textBoxProjectName;
+        private Label labelProjectName;
     }
 }
