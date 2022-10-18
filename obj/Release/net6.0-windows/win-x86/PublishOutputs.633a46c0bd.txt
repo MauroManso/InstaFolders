@@ -1,0 +1,7 @@
+C:\Users\mauro\Desktop\Test\InstaFolders.pdb
+C:\Users\mauro\Desktop\Test\D3DCompiler_47_cor3.dll
+C:\Users\mauro\Desktop\Test\PenImc_cor3.dll
+C:\Users\mauro\Desktop\Test\PresentationNative_cor3.dll
+C:\Users\mauro\Desktop\Test\vcruntime140_cor3.dll
+C:\Users\mauro\Desktop\Test\wpfgfx_cor3.dll
+C:\Users\mauro\Desktop\Test\InstaFolders.exe

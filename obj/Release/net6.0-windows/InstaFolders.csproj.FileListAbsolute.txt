@@ -15,3 +15,4 @@ D:\Projects\InstaFolders\obj\Release\net6.0-windows\refint\InstaFolders.dll
 D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.pdb
 D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.genruntimeconfig.cache
 D:\Projects\InstaFolders\obj\Release\net6.0-windows\ref\InstaFolders.dll
+D:\Projects\InstaFolders\obj\Release\net6.0-windows\InstaFolders.csproj.Fody.CopyLocal.cache
