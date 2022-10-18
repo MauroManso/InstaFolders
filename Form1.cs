@@ -10,6 +10,39 @@ namespace InstaFolders
 
         List<string> folderList = new List<string>();
 
+        public void ResetDesign()
+        {
+            checkBoxAssets.Checked = false;
+            checkBox3DsMax.Checked = false;
+            checkBoxAfterEffects.Checked = false;
+            checkBoxBlender.Checked = false;
+            checkBoxCinema4D.Checked = false;
+            checkBoxClarisse.Checked = false;
+            checkBoxDaVinci.Checked = false;
+            checkBoxHoudini.Checked = false;
+            checkBoxIlustrator.Checked = false;
+            checkBoxKrita.Checked = false;
+            checkBoxMarvelous.Checked = false;
+            checkBoxMaya.Checked = false;
+            checkBoxNuke.Checked = false;
+            checkBoxPhotoshop.Checked = false;
+            checkBoxPremiere.Checked = false;
+            checkBoxSpeedTree.Checked = false;
+            checkBoxSubstance.Checked = false;
+            checkBoxTerragen.Checked = false;
+            checkBoxUnreal.Checked = false;
+            checkBoxZBrush.Checked = false;
+            checkBoxAssets.Checked = false;
+            checkBoxRender.Checked = false;
+            checkBoxObs.Checked = false;
+
+            RefreshChecklist("");
+
+            textBoxProjectName.Clear();
+            textBoxAdd.Clear();
+            richTextBox1.Clear();
+        }
+
         public FormMainInstaFolder()
         {
             InitializeComponent();
@@ -208,6 +241,8 @@ namespace InstaFolders
                     Directory.CreateDirectory(subdir);
                 }
             }
+
+            ResetDesign();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

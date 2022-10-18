@@ -30,6 +30,9 @@
         {
             this.checkBoxAssets = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBoxObs = new System.Windows.Forms.CheckBox();
+            this.checkBoxRender = new System.Windows.Forms.CheckBox();
             this.checkBoxZBrush = new System.Windows.Forms.CheckBox();
             this.checkBoxUnreal = new System.Windows.Forms.CheckBox();
             this.checkBoxTerragen = new System.Windows.Forms.CheckBox();
@@ -58,10 +61,8 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.textBoxProjectName = new System.Windows.Forms.TextBox();
             this.labelProjectName = new System.Windows.Forms.Label();
-            this.checkBoxRender = new System.Windows.Forms.CheckBox();
-            this.checkBoxObs = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,6 +112,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 1007);
             this.panel1.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
+            this.panel2.Location = new System.Drawing.Point(210, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(3, 911);
+            this.panel2.TabIndex = 27;
+            // 
+            // checkBoxObs
+            // 
+            this.checkBoxObs.AutoSize = true;
+            this.checkBoxObs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxObs.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxObs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
+            this.checkBoxObs.Location = new System.Drawing.Point(255, 135);
+            this.checkBoxObs.Name = "checkBoxObs";
+            this.checkBoxObs.Size = new System.Drawing.Size(77, 32);
+            this.checkBoxObs.TabIndex = 26;
+            this.checkBoxObs.Text = "Obs";
+            this.checkBoxObs.UseVisualStyleBackColor = true;
+            this.checkBoxObs.CheckedChanged += new System.EventHandler(this.checkBoxObs_CheckedChanged);
+            // 
+            // checkBoxRender
+            // 
+            this.checkBoxRender.AutoSize = true;
+            this.checkBoxRender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxRender.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxRender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
+            this.checkBoxRender.Location = new System.Drawing.Point(255, 85);
+            this.checkBoxRender.Name = "checkBoxRender";
+            this.checkBoxRender.Size = new System.Drawing.Size(110, 32);
+            this.checkBoxRender.TabIndex = 25;
+            this.checkBoxRender.Text = "Render";
+            this.checkBoxRender.UseVisualStyleBackColor = true;
+            this.checkBoxRender.CheckedChanged += new System.EventHandler(this.checkBoxRender_CheckedChanged);
             // 
             // checkBoxZBrush
             // 
@@ -511,34 +548,6 @@
             this.labelProjectName.TabIndex = 10;
             this.labelProjectName.Text = "Project name:";
             // 
-            // checkBoxRender
-            // 
-            this.checkBoxRender.AutoSize = true;
-            this.checkBoxRender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxRender.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxRender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxRender.Location = new System.Drawing.Point(255, 85);
-            this.checkBoxRender.Name = "checkBoxRender";
-            this.checkBoxRender.Size = new System.Drawing.Size(110, 32);
-            this.checkBoxRender.TabIndex = 25;
-            this.checkBoxRender.Text = "Render";
-            this.checkBoxRender.UseVisualStyleBackColor = true;
-            this.checkBoxRender.CheckedChanged += new System.EventHandler(this.checkBoxRender_CheckedChanged);
-            // 
-            // checkBoxObs
-            // 
-            this.checkBoxObs.AutoSize = true;
-            this.checkBoxObs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxObs.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxObs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxObs.Location = new System.Drawing.Point(255, 135);
-            this.checkBoxObs.Name = "checkBoxObs";
-            this.checkBoxObs.Size = new System.Drawing.Size(77, 32);
-            this.checkBoxObs.TabIndex = 26;
-            this.checkBoxObs.Text = "Obs";
-            this.checkBoxObs.UseVisualStyleBackColor = true;
-            this.checkBoxObs.CheckedChanged += new System.EventHandler(this.checkBoxObs_CheckedChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -550,13 +559,16 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Add folder:";
             // 
-            // panel2
+            // label2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.panel2.Location = new System.Drawing.Point(210, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(3, 911);
-            this.panel2.TabIndex = 27;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
+            this.label2.Location = new System.Drawing.Point(468, 450);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 23);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Folders List";
             // 
             // FormMainInstaFolder
             // 
@@ -564,6 +576,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(215)))), ((int)(((byte)(214)))));
             this.ClientSize = new System.Drawing.Size(961, 1014);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelProjectName);
             this.Controls.Add(this.textBoxProjectName);
@@ -622,5 +635,6 @@
         private CheckBox checkBoxRender;
         private Label label1;
         private Panel panel2;
+        private Label label2;
     }
 }
