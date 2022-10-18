@@ -159,7 +159,21 @@ namespace InstaFolders
             else if (folderList.Contains("ZBrush")) folderList.Remove("ZBrush");
 
 
-            if(add.Length > 1)
+            if (checkBoxObs.Checked)
+            {
+                if (folderList.Contains("Obs") == false) folderList.Add("Obs");
+            }
+            else if (folderList.Contains("Obs")) folderList.Remove("Obs");
+
+
+            if (checkBoxRender.Checked)
+            {
+                if (folderList.Contains("Render") == false) folderList.Add("Render");
+            }
+            else if (folderList.Contains("Render")) folderList.Remove("Render");
+
+
+            if (add.Length > 1)
             {
                 folderList.Add(add);
 
@@ -308,6 +322,16 @@ namespace InstaFolders
         }
 
         private void checkBoxZBrush_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshChecklist("");
+        }
+
+        private void checkBoxRender_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshChecklist("");
+        }
+
+        private void checkBoxObs_CheckedChanged(object sender, EventArgs e)
         {
             RefreshChecklist("");
         }

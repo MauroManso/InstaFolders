@@ -58,6 +58,10 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.textBoxProjectName = new System.Windows.Forms.TextBox();
             this.labelProjectName = new System.Windows.Forms.Label();
+            this.checkBoxRender = new System.Windows.Forms.CheckBox();
+            this.checkBoxObs = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +71,7 @@
             this.checkBoxAssets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxAssets.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxAssets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxAssets.Location = new System.Drawing.Point(30, 35);
+            this.checkBoxAssets.Location = new System.Drawing.Point(255, 35);
             this.checkBoxAssets.Name = "checkBoxAssets";
             this.checkBoxAssets.Size = new System.Drawing.Size(131, 32);
             this.checkBoxAssets.TabIndex = 3;
@@ -78,6 +82,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(99)))), ((int)(((byte)(101)))));
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.checkBoxObs);
+            this.panel1.Controls.Add(this.checkBoxRender);
             this.panel1.Controls.Add(this.checkBoxZBrush);
             this.panel1.Controls.Add(this.checkBoxUnreal);
             this.panel1.Controls.Add(this.checkBoxTerragen);
@@ -102,7 +109,7 @@
             this.panel1.Controls.Add(this.checkBoxAssets);
             this.panel1.Location = new System.Drawing.Point(2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(306, 1058);
+            this.panel1.Size = new System.Drawing.Size(436, 1007);
             this.panel1.TabIndex = 4;
             // 
             // checkBoxZBrush
@@ -111,7 +118,7 @@
             this.checkBoxZBrush.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxZBrush.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxZBrush.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxZBrush.Location = new System.Drawing.Point(30, 985);
+            this.checkBoxZBrush.Location = new System.Drawing.Point(30, 935);
             this.checkBoxZBrush.Name = "checkBoxZBrush";
             this.checkBoxZBrush.Size = new System.Drawing.Size(107, 32);
             this.checkBoxZBrush.TabIndex = 24;
@@ -126,7 +133,7 @@
             this.checkBoxUnreal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxUnreal.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxUnreal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxUnreal.Location = new System.Drawing.Point(30, 935);
+            this.checkBoxUnreal.Location = new System.Drawing.Point(30, 885);
             this.checkBoxUnreal.Name = "checkBoxUnreal";
             this.checkBoxUnreal.Size = new System.Drawing.Size(102, 32);
             this.checkBoxUnreal.TabIndex = 23;
@@ -141,7 +148,7 @@
             this.checkBoxTerragen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxTerragen.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxTerragen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxTerragen.Location = new System.Drawing.Point(30, 885);
+            this.checkBoxTerragen.Location = new System.Drawing.Point(30, 835);
             this.checkBoxTerragen.Name = "checkBoxTerragen";
             this.checkBoxTerragen.Size = new System.Drawing.Size(129, 32);
             this.checkBoxTerragen.TabIndex = 22;
@@ -156,7 +163,7 @@
             this.checkBoxSubstance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxSubstance.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxSubstance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxSubstance.Location = new System.Drawing.Point(30, 835);
+            this.checkBoxSubstance.Location = new System.Drawing.Point(30, 785);
             this.checkBoxSubstance.Name = "checkBoxSubstance";
             this.checkBoxSubstance.Size = new System.Drawing.Size(145, 32);
             this.checkBoxSubstance.TabIndex = 21;
@@ -171,7 +178,7 @@
             this.checkBoxSpeedTree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxSpeedTree.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxSpeedTree.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxSpeedTree.Location = new System.Drawing.Point(30, 785);
+            this.checkBoxSpeedTree.Location = new System.Drawing.Point(30, 735);
             this.checkBoxSpeedTree.Name = "checkBoxSpeedTree";
             this.checkBoxSpeedTree.Size = new System.Drawing.Size(150, 32);
             this.checkBoxSpeedTree.TabIndex = 20;
@@ -186,7 +193,7 @@
             this.checkBoxPremiere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxPremiere.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxPremiere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxPremiere.Location = new System.Drawing.Point(30, 735);
+            this.checkBoxPremiere.Location = new System.Drawing.Point(30, 685);
             this.checkBoxPremiere.Name = "checkBoxPremiere";
             this.checkBoxPremiere.Size = new System.Drawing.Size(129, 32);
             this.checkBoxPremiere.TabIndex = 19;
@@ -201,7 +208,7 @@
             this.checkBoxPhotoshop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxPhotoshop.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxPhotoshop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxPhotoshop.Location = new System.Drawing.Point(30, 685);
+            this.checkBoxPhotoshop.Location = new System.Drawing.Point(30, 635);
             this.checkBoxPhotoshop.Name = "checkBoxPhotoshop";
             this.checkBoxPhotoshop.Size = new System.Drawing.Size(146, 32);
             this.checkBoxPhotoshop.TabIndex = 18;
@@ -216,7 +223,7 @@
             this.checkBoxNuke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxNuke.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxNuke.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxNuke.Location = new System.Drawing.Point(30, 635);
+            this.checkBoxNuke.Location = new System.Drawing.Point(30, 585);
             this.checkBoxNuke.Name = "checkBoxNuke";
             this.checkBoxNuke.Size = new System.Drawing.Size(88, 32);
             this.checkBoxNuke.TabIndex = 17;
@@ -231,7 +238,7 @@
             this.checkBoxMaya.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxMaya.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxMaya.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxMaya.Location = new System.Drawing.Point(30, 585);
+            this.checkBoxMaya.Location = new System.Drawing.Point(30, 535);
             this.checkBoxMaya.Name = "checkBoxMaya";
             this.checkBoxMaya.Size = new System.Drawing.Size(91, 32);
             this.checkBoxMaya.TabIndex = 16;
@@ -246,7 +253,7 @@
             this.checkBoxMarvelous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxMarvelous.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxMarvelous.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxMarvelous.Location = new System.Drawing.Point(30, 535);
+            this.checkBoxMarvelous.Location = new System.Drawing.Point(30, 485);
             this.checkBoxMarvelous.Name = "checkBoxMarvelous";
             this.checkBoxMarvelous.Size = new System.Drawing.Size(142, 32);
             this.checkBoxMarvelous.TabIndex = 15;
@@ -261,7 +268,7 @@
             this.checkBoxKrita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxKrita.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxKrita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxKrita.Location = new System.Drawing.Point(30, 485);
+            this.checkBoxKrita.Location = new System.Drawing.Point(30, 435);
             this.checkBoxKrita.Name = "checkBoxKrita";
             this.checkBoxKrita.Size = new System.Drawing.Size(82, 32);
             this.checkBoxKrita.TabIndex = 14;
@@ -276,7 +283,7 @@
             this.checkBoxIlustrator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxIlustrator.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIlustrator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxIlustrator.Location = new System.Drawing.Point(30, 435);
+            this.checkBoxIlustrator.Location = new System.Drawing.Point(30, 385);
             this.checkBoxIlustrator.Name = "checkBoxIlustrator";
             this.checkBoxIlustrator.Size = new System.Drawing.Size(126, 32);
             this.checkBoxIlustrator.TabIndex = 13;
@@ -291,7 +298,7 @@
             this.checkBoxHoudini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxHoudini.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxHoudini.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxHoudini.Location = new System.Drawing.Point(30, 385);
+            this.checkBoxHoudini.Location = new System.Drawing.Point(30, 335);
             this.checkBoxHoudini.Name = "checkBoxHoudini";
             this.checkBoxHoudini.Size = new System.Drawing.Size(112, 32);
             this.checkBoxHoudini.TabIndex = 12;
@@ -334,7 +341,7 @@
             this.checkBoxDaVinci.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxDaVinci.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxDaVinci.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxDaVinci.Location = new System.Drawing.Point(30, 335);
+            this.checkBoxDaVinci.Location = new System.Drawing.Point(30, 285);
             this.checkBoxDaVinci.Name = "checkBoxDaVinci";
             this.checkBoxDaVinci.Size = new System.Drawing.Size(114, 32);
             this.checkBoxDaVinci.TabIndex = 9;
@@ -349,7 +356,7 @@
             this.checkBoxClarisse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxClarisse.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxClarisse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxClarisse.Location = new System.Drawing.Point(30, 285);
+            this.checkBoxClarisse.Location = new System.Drawing.Point(30, 235);
             this.checkBoxClarisse.Name = "checkBoxClarisse";
             this.checkBoxClarisse.Size = new System.Drawing.Size(118, 32);
             this.checkBoxClarisse.TabIndex = 8;
@@ -364,7 +371,7 @@
             this.checkBoxCinema4D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxCinema4D.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxCinema4D.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxCinema4D.Location = new System.Drawing.Point(30, 235);
+            this.checkBoxCinema4D.Location = new System.Drawing.Point(30, 185);
             this.checkBoxCinema4D.Name = "checkBoxCinema4D";
             this.checkBoxCinema4D.Size = new System.Drawing.Size(144, 32);
             this.checkBoxCinema4D.TabIndex = 7;
@@ -379,7 +386,7 @@
             this.checkBoxBlender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxBlender.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxBlender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxBlender.Location = new System.Drawing.Point(30, 185);
+            this.checkBoxBlender.Location = new System.Drawing.Point(30, 135);
             this.checkBoxBlender.Name = "checkBoxBlender";
             this.checkBoxBlender.Size = new System.Drawing.Size(114, 32);
             this.checkBoxBlender.TabIndex = 6;
@@ -394,7 +401,7 @@
             this.checkBoxAfterEffects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxAfterEffects.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxAfterEffects.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBoxAfterEffects.Location = new System.Drawing.Point(30, 135);
+            this.checkBoxAfterEffects.Location = new System.Drawing.Point(30, 85);
             this.checkBoxAfterEffects.Name = "checkBoxAfterEffects";
             this.checkBoxAfterEffects.Size = new System.Drawing.Size(158, 32);
             this.checkBoxAfterEffects.TabIndex = 5;
@@ -409,7 +416,7 @@
             this.checkBox3DsMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox3DsMax.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox3DsMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.checkBox3DsMax.Location = new System.Drawing.Point(30, 85);
+            this.checkBox3DsMax.Location = new System.Drawing.Point(30, 35);
             this.checkBox3DsMax.Name = "checkBox3DsMax";
             this.checkBox3DsMax.Size = new System.Drawing.Size(120, 32);
             this.checkBox3DsMax.TabIndex = 4;
@@ -422,7 +429,7 @@
             this.textBoxAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
             this.textBoxAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxAdd.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxAdd.Location = new System.Drawing.Point(367, 399);
+            this.textBoxAdd.Location = new System.Drawing.Point(468, 399);
             this.textBoxAdd.Name = "textBoxAdd";
             this.textBoxAdd.Size = new System.Drawing.Size(288, 31);
             this.textBoxAdd.TabIndex = 6;
@@ -432,9 +439,9 @@
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(367, 476);
+            this.richTextBox1.Location = new System.Drawing.Point(468, 476);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(419, 521);
+            this.richTextBox1.Size = new System.Drawing.Size(419, 444);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
@@ -445,7 +452,7 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.buttonExit.Location = new System.Drawing.Point(810, 12);
+            this.buttonExit.Location = new System.Drawing.Point(911, 12);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(40, 40);
             this.buttonExit.TabIndex = 7;
@@ -460,7 +467,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.buttonAdd.Location = new System.Drawing.Point(683, 399);
+            this.buttonAdd.Location = new System.Drawing.Point(784, 399);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(103, 32);
             this.buttonAdd.TabIndex = 5;
@@ -475,9 +482,9 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.btnCreate.Location = new System.Drawing.Point(367, 188);
+            this.btnCreate.Location = new System.Drawing.Point(468, 159);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(160, 61);
+            this.btnCreate.Size = new System.Drawing.Size(419, 61);
             this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "CREATE";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -488,9 +495,9 @@
             this.textBoxProjectName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
             this.textBoxProjectName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxProjectName.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxProjectName.Location = new System.Drawing.Point(367, 115);
+            this.textBoxProjectName.Location = new System.Drawing.Point(468, 115);
             this.textBoxProjectName.Name = "textBoxProjectName";
-            this.textBoxProjectName.Size = new System.Drawing.Size(288, 31);
+            this.textBoxProjectName.Size = new System.Drawing.Size(419, 31);
             this.textBoxProjectName.TabIndex = 9;
             // 
             // labelProjectName
@@ -498,18 +505,66 @@
             this.labelProjectName.AutoSize = true;
             this.labelProjectName.Font = new System.Drawing.Font("SansSerif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelProjectName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
-            this.labelProjectName.Location = new System.Drawing.Point(367, 69);
+            this.labelProjectName.Location = new System.Drawing.Point(583, 80);
             this.labelProjectName.Name = "labelProjectName";
             this.labelProjectName.Size = new System.Drawing.Size(201, 32);
             this.labelProjectName.TabIndex = 10;
             this.labelProjectName.Text = "Project name:";
+            // 
+            // checkBoxRender
+            // 
+            this.checkBoxRender.AutoSize = true;
+            this.checkBoxRender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxRender.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxRender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
+            this.checkBoxRender.Location = new System.Drawing.Point(255, 85);
+            this.checkBoxRender.Name = "checkBoxRender";
+            this.checkBoxRender.Size = new System.Drawing.Size(110, 32);
+            this.checkBoxRender.TabIndex = 25;
+            this.checkBoxRender.Text = "Render";
+            this.checkBoxRender.UseVisualStyleBackColor = true;
+            this.checkBoxRender.CheckedChanged += new System.EventHandler(this.checkBoxRender_CheckedChanged);
+            // 
+            // checkBoxObs
+            // 
+            this.checkBoxObs.AutoSize = true;
+            this.checkBoxObs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxObs.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxObs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
+            this.checkBoxObs.Location = new System.Drawing.Point(255, 135);
+            this.checkBoxObs.Name = "checkBoxObs";
+            this.checkBoxObs.Size = new System.Drawing.Size(77, 32);
+            this.checkBoxObs.TabIndex = 26;
+            this.checkBoxObs.Text = "Obs";
+            this.checkBoxObs.UseVisualStyleBackColor = true;
+            this.checkBoxObs.CheckedChanged += new System.EventHandler(this.checkBoxObs_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SansSerif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
+            this.label1.Location = new System.Drawing.Point(468, 373);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 23);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Add folder:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
+            this.panel2.Location = new System.Drawing.Point(210, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(3, 911);
+            this.panel2.TabIndex = 27;
             // 
             // FormMainInstaFolder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(215)))), ((int)(((byte)(214)))));
-            this.ClientSize = new System.Drawing.Size(862, 1064);
+            this.ClientSize = new System.Drawing.Size(961, 1014);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelProjectName);
             this.Controls.Add(this.textBoxProjectName);
             this.Controls.Add(this.richTextBox1);
@@ -563,5 +618,9 @@
         private Button btnCreate;
         private TextBox textBoxProjectName;
         private Label labelProjectName;
+        private CheckBox checkBoxObs;
+        private CheckBox checkBoxRender;
+        private Label label1;
+        private Panel panel2;
     }
 }
